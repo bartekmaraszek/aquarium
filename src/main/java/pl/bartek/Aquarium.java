@@ -45,33 +45,34 @@ public class Aquarium extends Frame implements Runnable {
 
 	void loadImages() {
 		tracker = new MediaTracker(this);
+		ClassLoader loader = getClass().getClassLoader();
 
 		neonImages[0] = Toolkit.getDefaultToolkit().getImage(
-				Aquarium.class.getResource("img/neon_left.png"));
+				loader.getResource("neon_left.png"));
 		tracker.addImage(neonImages[0], 0);
 
 		neonImages[1] = Toolkit.getDefaultToolkit().getImage(
-				Aquarium.class.getResource("img/neon_right.png"));
+				loader.getResource("neon_right.png"));
 		tracker.addImage(neonImages[1], 0);
 
 		ramirezImages[0] = Toolkit.getDefaultToolkit().getImage(
-				Aquarium.class.getResource("img/ramirez_left.png"));
+				loader.getResource("ramirez_left.png"));
 		tracker.addImage(ramirezImages[0], 0);
 
 		ramirezImages[1] = Toolkit.getDefaultToolkit().getImage(
-				Aquarium.class.getResource("img/ramirez_right.png"));
+				loader.getResource("ramirez_right.png"));
 		tracker.addImage(ramirezImages[1], 0);
 
 		corydorasImages[0] = Toolkit.getDefaultToolkit().getImage(
-				Aquarium.class.getResource("img/corydoras_left.png"));
+				loader.getResource("corydoras_left.png"));
 		tracker.addImage(corydorasImages[0], 0);
 
 		corydorasImages[1] = Toolkit.getDefaultToolkit().getImage(
-				Aquarium.class.getResource("img/corydoras_right.png"));
+				loader.getResource("corydoras_right.png"));
 		tracker.addImage(corydorasImages[1], 0);
 
 		aquariumImage = Toolkit.getDefaultToolkit().getImage(
-				Aquarium.class.getResource("img/aquarium.png"));
+				loader.getResource("aquarium.png"));
 		tracker.addImage(aquariumImage, 0);
 
 		try {
